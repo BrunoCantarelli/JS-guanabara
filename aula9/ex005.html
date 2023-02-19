@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passo com DOM</title>
+    <style>
+        body{
+            background-color: rgb(80, 136, 241);
+            color: #fff;
+            font: normal 18pt Arial;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="title">Iniciado estudos com DOM</h1>
+    <p>Aqui vai os resultados</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+
+    <script>
+
+        var p1 = document.getElementsByTagName('p')[0] // [1] vai imprimir o segundo paragrafo
+        document.write('Está escrito assim: ' + p1.innerHTML)
+
+        var title = document.getElementsByClassName('title')[0]
+        title.style.color = 'purple'
+
+        var d = document.querySelector('div#msg') // seleciona o id msg, mas pode trocar o # por . caso seja uma classe
+        d.style.background = 'red'
+    </script>
+</body>
+</html>
+
+<!--
+// getElementsByClassName
+// getElementsByTagName
+// querySelector
+// querySelectorAll
+// getElementById
+// getElementsByName 
+-->

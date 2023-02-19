@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        var nome = window.prompt('Qual é o seu nome?');
+        var salario = Number(window.prompt(`Qual é o seu salário ${nome}?`));
+        var real = salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
+        var dolar = salario.toLocaleString('en-US', {style: 'currency', currency: 'USD'});
+        var euro = salario.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'});
+
+        document.write(`Olá, <strong>${nome}</strong>!<br>`);
+        document.write(`Seu nome tem ${nome.length} letras!<br>`)
+        document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()}<br>`);
+        document.write(`Seu nome em minúsculas é ${nome.toLowerCase()}`);
+
+        document.write(`O salário de ${nome} em Real é ${real}<br>`);
+        document.write(`Se o salário de ${nome} fosse em Dólar seria ${dolar}<br>`);
+        document.write(`Se salário de ${nome} fosse em Euro seria ${euro}`);
+    </script>
+</body>
+</html>
